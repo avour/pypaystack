@@ -4,7 +4,7 @@ from pypaystack import utils
  
 class Transfer(BaseAPI):
 
-    def verify_account(self, account_number=None, bank_code=None):
+    def verify_account_number(self, account_number=None, bank_code=None):
         """
         Gets all your transactions
         
@@ -48,7 +48,7 @@ class Transfer(BaseAPI):
 
         url = self._url("POST", "https://api.paystack.co/transfer", payload)
 
-    def charge(self, payload):
+    def bulk_transfer(self, payload):
         """
         -d '{
             "currency": "NGN",
